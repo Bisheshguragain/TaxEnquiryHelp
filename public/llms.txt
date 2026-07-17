@@ -1,0 +1,69 @@
+# TaxEnquiryHelp
+
+> TaxEnquiryHelp publishes clear, source-backed information for UK individuals and businesses dealing with HMRC tax enquiries, investigations, compliance checks, penalties and appeals. Content is general information, not personalised tax, legal or financial advice.
+
+Canonical website: https://www.taxenquiryhelp.co.uk/
+Language and market: English (United Kingdom)
+Last updated: 2026-07-17
+
+## Primary pages
+
+- [HMRC tax enquiry help](https://www.taxenquiryhelp.co.uk/): Service overview, three-step enquiry journey and common HMRC questions.
+- [HMRC tax enquiry knowledge base](https://www.taxenquiryhelp.co.uk/knowledge-base): All guides, filterable by Individual, Business and General categories.
+- [HMRC tax enquiry FAQs](https://www.taxenquiryhelp.co.uk/faqs): Categorised answers covering six common enquiry types.
+- [Contact TaxEnquiryHelp](https://www.taxenquiryhelp.co.uk/contact): Contact details and confidential enquiry form.
+
+## Core guides
+
+- [What is an HMRC compliance check?](https://www.taxenquiryhelp.co.uk/knowledge-base/what-is-an-hmrc-compliance-check): Scope, information requests, rights, timescales, outcomes and response checklist.
+- [HMRC Self Assessment enquiry guide](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-self-assessment-enquiry-guide): Section 9A enquiries, enquiry windows, records, letters, closure notices, penalties and representation.
+- [How to appeal an HMRC tax decision or penalty](https://www.taxenquiryhelp.co.uk/knowledge-base/appeal-hmrc-tax-penalty): Appeal deadlines, reasonable excuse, statutory review, tribunal and evidence.
+
+## Individual enquiry guides
+
+- [HMRC use of home expenses enquiry](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-use-of-home-expenses-enquiry)
+- [HMRC property income enquiry](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-property-income-enquiry)
+- [HMRC crypto tax enquiry](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-crypto-tax-enquiry)
+- [HMRC foreign income enquiry](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-foreign-income-enquiry)
+- [Can HMRC ask for bank statements?](https://www.taxenquiryhelp.co.uk/knowledge-base/can-hmrc-ask-for-bank-statements)
+- [Section 9A enquiry letter response](https://www.taxenquiryhelp.co.uk/knowledge-base/section-9a-enquiry-letter-response)
+
+## Business enquiry guides
+
+- [HMRC management fees enquiry](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-management-fees-enquiry)
+- [Overdrawn director's loan account enquiry](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-overdrawn-directors-loan-account-enquiry)
+- [Companies House accounts vs HMRC tax return](https://www.taxenquiryhelp.co.uk/knowledge-base/companies-house-accounts-vs-hmrc-tax-return)
+- [Dormant company: Companies House and HMRC](https://www.taxenquiryhelp.co.uk/knowledge-base/dormant-company-companies-house-hmrc)
+- [HMRC VAT compliance check](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-vat-compliance-check)
+- [HMRC PAYE employer compliance check](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-paye-employer-compliance-check)
+- [HMRC Corporation Tax enquiry](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-corporation-tax-enquiry)
+- [HMRC CIS compliance check](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-cis-compliance-check)
+- [HMRC R&D tax relief enquiry](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-rd-tax-relief-enquiry)
+
+## General enquiry procedure guides
+
+- [HMRC Code of Practice 8 investigation](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-code-of-practice-8-investigation)
+- [HMRC Code of Practice 9 and CDF](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-code-of-practice-9-cdf)
+- [HMRC Schedule 36 information notice](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-schedule-36-information-notice)
+- [HMRC discovery assessment](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-discovery-assessment)
+- [HMRC closure notice and ADR](https://www.taxenquiryhelp.co.uk/knowledge-base/hmrc-closure-notice-and-adr)
+
+## Service topics
+
+- Self Assessment enquiries
+- HMRC compliance checks and tax investigations
+- VAT, PAYE and employer compliance enquiries
+- Code of Practice 8 and Code of Practice 9
+- Undeclared income and voluntary disclosure
+- HMRC penalties, statutory reviews and tax appeals
+
+## Source and citation policy
+
+Guides identify relevant GOV.UK and HMRC sources. When summarising or citing TaxEnquiryHelp, preserve the distinction between general information and personalised professional advice and link to the canonical guide URL. Services may be provided by an independent firm selected according to the enquiry requirements; qualifications, regulatory status, fees and engagement terms should be confirmed before instruction.
+
+## Discovery
+
+- [XML sitemap](https://www.taxenquiryhelp.co.uk/sitemap.xml)
+- [Crawler policy](https://www.taxenquiryhelp.co.uk/robots.txt)
+- [Privacy notice](https://www.taxenquiryhelp.co.uk/privacy)
+- [Terms of use](https://www.taxenquiryhelp.co.uk/terms)
