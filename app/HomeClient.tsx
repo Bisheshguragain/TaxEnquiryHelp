@@ -88,6 +88,7 @@ export default function Home({ featuredGuides, latestGuides }: HomeProps) {
           details:data.get('details'),
           consent:data.get('consent')==='on',
           website:data.get('website'),
+          source:'Homepage guided enquiry',
         }),
       });
       const result=await response.json().catch(()=>({}));
