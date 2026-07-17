@@ -1,0 +1,8 @@
+import type {Metadata} from 'next';
+import Link from 'next/link';
+import {questionClusters,questions} from './questions';
+import '../knowledge-base/knowledge.css';
+
+export const metadata:Metadata={title:'HMRC Questions Answered: UK Tax Enquiry Help',description:'Clear, source-backed answers to 36 common questions about HMRC enquiries, compliance checks, VAT, PAYE, COP8, COP9, disclosures, penalties and appeals.',alternates:{canonical:'/hmrc-questions'}};
+
+export default function QuestionsHub(){return <main className="kb question-hub"><section className="kb-hero"><div className="kb-wrap"><p className="kb-kicker">HMRC questions answered</p><h1>Focused answers to urgent HMRC enquiry questions.</h1><p>Explore 36 practical, source-backed explanations organised around the six enquiry situations taxpayers and businesses face most often.</p></div></section><div className="kb-wrap question-clusters">{questionClusters.map((cluster,index)=>{const items=questions.filter(x=>x.cluster===cluster);return <section key={cluster} id={`cluster-${index+1}`}><header><span>0{index+1}</span><div><p>Topic cluster</p><h2>{cluster}</h2></div><strong>{items.length} answers</strong></header><div>{items.map(item=><article key={item.slug}><h3><Link href={`/hmrc-questions/${item.slug}`}>{item.question}</Link></h3><p>{item.description}</p><Link href={`/hmrc-questions/${item.slug}`}>Read the answer →</Link></article>)}</div></section>})}</div></main>}

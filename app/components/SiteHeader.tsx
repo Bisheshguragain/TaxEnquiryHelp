@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 const Shield = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 2.9 8.3 7 10 4.1-1.7 7-5.4 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg>;
 const Arrow = () => <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg>;
 
-const links=[['How we help','/#support'],['Knowledge Base','/knowledge-base'],['FAQs','/faqs'],['Contact us','/contact']] as const;
+const links=[['How we help','/#support'],['Knowledge Base','/knowledge-base'],['HMRC Questions','/hmrc-questions'],['FAQs','/faqs'],['Contact us','/contact']] as const;
 const urgentEmail='mailto:Hello@TaxEnquiryHelp.co.uk?subject=Urgent%20HMRC%20enquiry%20%E2%80%93%20response%20deadline&body=Hello%20TaxEnquiryHelp%2C%0D%0A%0D%0APlease%20review%20my%20urgent%20HMRC%20enquiry.%0D%0A%0D%0AFull%20name%3A%20%0D%0AContact%20number%3A%20%0D%0AType%20of%20HMRC%20enquiry%3A%20%0D%0ADate%20of%20HMRC%20letter%3A%20%0D%0AResponse%20deadline%3A%20%0D%0ABrief%20summary%3A%20%0D%0A%0D%0APlease%20do%20not%20include%20your%20UTR%2C%20National%20Insurance%20number%20or%20sensitive%20documents%20in%20this%20initial%20email.';
 
 export default function SiteHeader(){
@@ -19,7 +19,7 @@ export default function SiteHeader(){
   return <>
     <header className="site-header">
       <a className="brand" href="/" aria-label="TaxEnquiryHelp home"><span className="brand-mark"><Shield /></span><span>TaxEnquiry<span>Help</span></span></a>
-      <nav className="desktop-nav" aria-label="Main navigation">{links.slice(0,4).map(([label,href])=><a href={href} key={href}>{label}</a>)}</nav>
+      <nav className="desktop-nav" aria-label="Main navigation">{links.map(([label,href])=><a href={href} key={href}>{label}</a>)}</nav>
       <a className="header-cta desktop-cta" href="/#enquiry">Get help now <Arrow /></a>
       <button className={`menu-toggle${open?' active':''}`} type="button" aria-label={open?'Close menu':'Open menu'} aria-expanded={open} aria-controls="mobile-navigation" onClick={()=>setOpen(value=>!value)}><span/><span/><span/></button>
     </header>
