@@ -116,7 +116,7 @@ export default function Home({ featuredGuides, latestGuides }: HomeProps) {
         </div>
         <aside className="enquiry-card" id="enquiry" aria-labelledby="enquiry-title">
           <div className="card-head"><div className="card-top"><span className="status-dot"/> Private & secure</div><span className="step-count">Step {enquiryStep} of 3</span></div>
-          <div className="progress" aria-label={`Step ${enquiryStep} of 3`}><span style={{width:`${enquiryStep*33.333}%`}} /></div>
+          <div className="progress" role="progressbar" aria-label="Enquiry progress" aria-valuemin={1} aria-valuemax={3} aria-valuenow={enquiryStep} aria-valuetext={`Step ${enquiryStep} of 3`}><span style={{width:`${enquiryStep*33.333}%`}} /></div>
           {enquiryStep===1 && <>
             <h2 id="enquiry-title">What has HMRC contacted you about?</h2>
             <p>Choose the closest option. It takes less than a minute.</p>
@@ -161,7 +161,7 @@ export default function Home({ featuredGuides, latestGuides }: HomeProps) {
         <p>An HMRC letter can feel urgent and unclear. We help you understand what HMRC is asking, what information matters, and the practical route forward.</p>
       </section>
       <section className="issue-grid section tight">
-        {issues.map(([title,body,slug],i)=><article className={`issue-card issue-color-${i+1}`} key={title}><div className="issue-num">0{i+1}</div><h3><a href={`/hmrc-enquiry-help/${slug}`}>{title}</a></h3><p>{body}</p><div className="issue-actions"><a href={`/hmrc-enquiry-help/${slug}`}>Explore issues</a><button className="issue-link" onClick={()=>startSpecialistFlow(title)} aria-label={`Get specialist help with ${title}`}>Get specialist help <Arrow /></button></div></article>)}
+        {issues.map(([title,body,slug],i)=><article className={`issue-card issue-color-${i+1}`} key={title}><div className="issue-num">0{i+1}</div><h3><a href={`/hmrc-enquiry-help/${slug}`}>{title}</a></h3><p>{body}</p><div className="issue-actions"><a href={`/hmrc-enquiry-help/${slug}`}>Explore {title.toLowerCase()} issues</a><button className="issue-link" onClick={()=>startSpecialistFlow(title)} aria-label={`Get specialist help with ${title}`}>Get specialist help <Arrow /></button></div></article>)}
       </section>
 
       <section className="process" id="process"><div className="section">

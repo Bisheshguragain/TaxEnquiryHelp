@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   creator: 'TaxEnquiryHelp',
   publisher: 'TaxEnquiryHelp',
   category: 'Tax enquiry information and specialist support',
+  icons: {
+    icon: [{ url: '/favicon.png', type: 'image/png', sizes: '192x192' }],
+    apple: [{ url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }],
+  },
   referrer: 'origin-when-cross-origin',
   alternates: { canonical: '/' },
   openGraph: { title: 'HMRC tax enquiry help, made clear', description: 'Practical, specialist support for HMRC enquiries and compliance checks across the UK.', url: '/', siteName: 'TaxEnquiryHelp', locale: 'en_GB', type: 'website' },
@@ -27,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const siteSchema = {'@context':'https://schema.org','@graph':[
-    {'@type':'Organization','@id':'https://www.taxenquiryhelp.co.uk/#organization',name:'TaxEnquiryHelp',url:'https://www.taxenquiryhelp.co.uk',description:'UK information and specialist support for HMRC tax enquiries, compliance checks, penalties and appeals.',address:{'@type':'PostalAddress',streetAddress:'Devonshire House, Level 1, One Mayfair Place',addressLocality:'London',postalCode:'W1J 8AJ',addressCountry:'GB'}},
+    {'@type':'Organization','@id':'https://www.taxenquiryhelp.co.uk/#organization',name:'TaxEnquiryHelp',url:'https://www.taxenquiryhelp.co.uk',logo:'https://www.taxenquiryhelp.co.uk/favicon.png',description:'UK information and specialist support for HMRC tax enquiries, compliance checks, penalties and appeals.',address:{'@type':'PostalAddress',streetAddress:'Devonshire House, Level 1, One Mayfair Place',addressLocality:'London',postalCode:'W1J 8AJ',addressCountry:'GB'}},
     {'@type':'WebSite','@id':'https://www.taxenquiryhelp.co.uk/#website',url:'https://www.taxenquiryhelp.co.uk',name:'TaxEnquiryHelp',inLanguage:'en-GB',publisher:{'@id':'https://www.taxenquiryhelp.co.uk/#organization'}},
   ]};
   return <html lang="en-GB"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(siteSchema)}}/><SiteHeader />{children}<SiteFooter /></body></html>;
