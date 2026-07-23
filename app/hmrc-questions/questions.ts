@@ -3,7 +3,7 @@ export type QuestionPage={slug:string;cluster:QuestionCluster;hub:string;questio
 
 const saSources:[string,string][]=[['GOV.UK: Self Assessment tax returns','https://www.gov.uk/self-assessment-tax-returns'],['HMRC Self Assessment Legal Framework Manual','https://www.gov.uk/hmrc-internal-manuals/self-assessment-legal-framework']];
 const checkSources:[string,string][]=[['GOV.UK: Tax compliance checks','https://www.gov.uk/tax-compliance-checks'],['HMRC compliance-check factsheets','https://www.gov.uk/government/collections/hm-revenue-and-customs-compliance-checks-factsheets']];
-const vatSources:[string,string][]=[['GOV.UK: VAT record keeping','https://www.gov.uk/vat-record-keeping'],['GOV.UK: PAYE and payroll','https://www.gov.uk/paye-for-employers']];
+const vatSources:[string,string][]=[['GOV.UK: VAT record keeping','https://www.gov.uk/vat-record-keeping'],['GOV.UK: VAT visits and inspections','https://www.gov.uk/vat-visits-inspections'],['GOV.UK: PAYE and payroll','https://www.gov.uk/paye-for-employers']];
 const copSources:[string,string][]=[['GOV.UK: Code of Practice 8','https://www.gov.uk/government/publications/code-of-practice-8-investigations'],['GOV.UK: Code of Practice 9','https://www.gov.uk/government/publications/code-of-practice-9-where-hmrc-suspects-fraud-cop-9']];
 const disclosureSources:[string,string][]=[['GOV.UK: Tell HMRC about undeclared income','https://www.gov.uk/undeclared-income'],['GOV.UK: Make a voluntary disclosure','https://www.gov.uk/government/publications/hmrc-your-guide-to-making-a-disclosure/your-guide-to-making-a-disclosure']];
 const appealSources:[string,string][]=[['GOV.UK: Disagree with a tax decision','https://www.gov.uk/tax-appeals'],['GOV.UK: Appeal to the tax tribunal','https://www.gov.uk/tax-tribunal']];
@@ -54,3 +54,12 @@ q({slug:'hmrc-rejected-appeal-next-steps',cluster:'HMRC penalties and appeals',h
 ];
 
 export const questionClusters=[...new Set(questions.map(x=>x.cluster))] as QuestionCluster[];
+
+export const questionClusterAnchors:Record<QuestionCluster,string>={
+  'Self Assessment enquiries':'self-assessment-enquiries',
+  'HMRC compliance checks':'hmrc-compliance-checks',
+  'VAT and PAYE enquiries':'vat-and-paye-enquiries',
+  'COP8 and COP9 investigations':'cop8-and-cop9-investigations',
+  'Undeclared income and disclosures':'undeclared-income-and-disclosures',
+  'HMRC penalties and appeals':'hmrc-penalties-and-appeals'
+};

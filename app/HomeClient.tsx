@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 const Arrow = () => <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg>;
 const Check = () => <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-9" /></svg>;
@@ -22,6 +22,15 @@ const enquiryPaths: Record<string, { question: string; hint: string; options: st
   'Code of Practice 8 or 9': { question: 'Which HMRC process is mentioned in the letter?', hint: 'These cases can be sensitive. Choose the wording shown on HMRC’s correspondence.', options: ['Code of Practice 8 (COP8)','Code of Practice 9 (COP9)','Contractual Disclosure Facility (CDF)','Suspected tax avoidance','I need help identifying the process'] },
   'Undeclared income': { question: 'What do you need help disclosing?', hint: 'An approximate category is enough at this stage.', options: ['Rental or property income','Overseas income or assets','Cryptoassets or investments','Self-employed or trading income','Something else or more than one source'] },
   'HMRC penalties or appeal': { question: 'What has HMRC issued?', hint: 'Deadlines can be short, so tell us what is on the latest notice.', options: ['Late filing or payment penalty','Inaccuracy penalty','Discovery assessment','Statutory review decision','Tax tribunal appeal deadline'] },
+};
+
+const enquiryCategoryNames: Record<string, string> = {
+  'self-assessment-enquiry': 'Self Assessment enquiry',
+  'compliance-check': 'HMRC compliance check',
+  'vat-paye-enquiry': 'VAT or PAYE enquiry',
+  'cop8-cop9-investigation': 'Code of Practice 8 or 9',
+  'undeclared-income-disclosure': 'Undeclared income',
+  'penalties-and-tax-appeals': 'HMRC penalties or appeal',
 };
 
 const faqs = [
@@ -66,6 +75,16 @@ export default function Home({ featuredGuides, latestGuides }: HomeProps) {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    const issue = category ? enquiryCategoryNames[category] : null;
+    if (issue) {
+      setSelectedIssue(issue);
+      setSelectedDetail(null);
+      setEnquiryStep(2);
+    }
+  }, []);
   const chooseIssue = (issue: string) => { setSelectedIssue(issue); setSelectedDetail(null); setEnquiryStep(2); };
   const startSpecialistFlow = (issue: string) => { chooseIssue(issue); window.setTimeout(()=>document.getElementById('enquiry')?.scrollIntoView({behavior:'smooth',block:'start'}),0); };
   const chooseDetail = (detail: string) => { setSelectedDetail(detail); setEnquiryStep(3); };
@@ -161,7 +180,7 @@ export default function Home({ featuredGuides, latestGuides }: HomeProps) {
         <p>An HMRC letter can feel urgent and unclear. We help you understand what HMRC is asking, what information matters, and the practical route forward.</p>
       </section>
       <section className="issue-grid section tight">
-        {issues.map(([title,body,slug],i)=><article className={`issue-card issue-color-${i+1}`} key={title}><div className="issue-num">0{i+1}</div><h3><a href={`/hmrc-enquiry-help/${slug}`}>{title}</a></h3><p>{body}</p><div className="issue-actions"><a href={`/hmrc-enquiry-help/${slug}`}>Explore {title.toLowerCase()} issues</a><button className="issue-link" onClick={()=>startSpecialistFlow(title)} aria-label={`Get specialist help with ${title}`}>Get specialist help <Arrow /></button></div></article>)}
+        {issues.map(([title,body,slug],i)=><article className={`issue-card issue-color-${i+1}`} key={title}><div className="issue-num">0{i+1}</div><h3><a href={`/hmrc-enquiry-help/${slug}`}>{title}</a></h3><p>{body}</p><div className="issue-actions"><a href={`/hmrc-enquiry-help/${slug}`} aria-label={`Explore more about ${title}`}>Explore more</a><button className="issue-link" onClick={()=>startSpecialistFlow(title)} aria-label={`Get specialist help with ${title}`}>Get specialist help <Arrow /></button></div></article>)}
       </section>
 
       <section className="process" id="process"><div className="section">

@@ -6,7 +6,7 @@ export type Guide = { slug:string; category:'Individual'|'Business'|'General'; t
 
 const coreGuides: Guide[] = [
   {
-    slug:'what-is-an-hmrc-compliance-check', category:'Business', shortTitle:'HMRC compliance checks', keyword:'HMRC compliance check', readingTime:'14 min read', updated:'17 July 2026',
+    slug:'what-is-an-hmrc-compliance-check', category:'Business', shortTitle:'HMRC compliance checks', keyword:'HMRC compliance check', secondaryKeywords:['HMRC compliance check letter','HMRC tax compliance check','what happens during an HMRC compliance check'], searchIntent:'Understand an HMRC compliance check letter, its scope and the practical steps for responding.', reviewed:'23 July 2026', readingTime:'14 min read', updated:'23 July 2026',
     title:'What Is an HMRC Compliance Check? A Complete UK Guide',
     description:'Received an HMRC compliance check letter? Learn what HMRC can check, what information it may request, your rights, likely timescales and how to respond.',
     intro:[
@@ -34,7 +34,7 @@ const coreGuides: Guide[] = [
     sources:[['GOV.UK: Tax compliance checks','https://www.gov.uk/tax-compliance-checks'],['HMRC compliance checks factsheets','https://www.gov.uk/government/collections/hm-revenue-and-customs-compliance-checks-factsheets']]
   },
   {
-    slug:'hmrc-self-assessment-enquiry-guide', category:'Individual', shortTitle:'Self Assessment enquiries', keyword:'HMRC Self Assessment enquiry', readingTime:'15 min read', updated:'17 July 2026',
+    slug:'hmrc-self-assessment-enquiry-guide', category:'Individual', shortTitle:'Self Assessment enquiries', keyword:'HMRC Self Assessment enquiry', secondaryKeywords:['HMRC Self Assessment enquiry letter','Section 9A enquiry','HMRC tax return investigation'], searchIntent:'Understand and respond to an HMRC Self Assessment enquiry notice or information request.', reviewed:'23 July 2026', readingTime:'15 min read', updated:'23 July 2026',
     title:'HMRC Self Assessment Enquiry: What to Do After a Letter',
     description:'A practical guide to HMRC Self Assessment enquiry letters, enquiry windows, requested records, closure notices, amendments, penalties and your next steps.',
     intro:['An HMRC Self Assessment enquiry is a formal check into a tax return. HMRC does not need to show that the return is wrong before opening an enquiry within the statutory window; it must give written notice. The enquiry may concern one figure or the whole return.','The first days matter. Find the response deadline, identify the return and tax year, and preserve the records used to prepare it. Do not assume that a request for information is either harmless or hostile. The right response is factual, organised and proportionate.','This UK guide explains enquiry notices, time limits and practical steps. Tax law changes and exceptions apply, particularly where HMRC considers a discovery assessment after the ordinary enquiry window. Obtain advice on your own facts.'],
@@ -59,7 +59,7 @@ const coreGuides: Guide[] = [
     sources:[['HMRC manual: power to enquire into tax returns','https://www.gov.uk/hmrc-internal-manuals/self-assessment-legal-framework/salf403'],['GOV.UK: Self Assessment general enquiries','https://www.gov.uk/find-hmrc-contacts/self-assessment-general-enquiries']]
   },
   {
-    slug:'appeal-hmrc-tax-penalty', category:'General', shortTitle:'HMRC penalties and appeals', keyword:'appeal HMRC penalty', readingTime:'14 min read', updated:'17 July 2026',
+    slug:'appeal-hmrc-tax-penalty', category:'General', shortTitle:'HMRC penalties and appeals', keyword:'appeal HMRC penalty', secondaryKeywords:['HMRC penalty appeal','appeal HMRC tax decision','HMRC reasonable excuse appeal'], searchIntent:'Understand the route, evidence and deadline for appealing an HMRC decision or penalty.', reviewed:'23 July 2026', readingTime:'14 min read', updated:'23 July 2026',
     title:'How to Appeal an HMRC Tax Decision or Penalty in the UK',
     description:'Learn how to appeal an HMRC penalty or tax decision, the usual 30-day deadline, statutory reviews, reasonable excuse evidence and tax tribunal steps.',
     intro:['If you disagree with an HMRC tax decision or penalty, acting within the deadline is crucial. The decision letter should explain the appeal route. For many decisions, the usual deadline is 30 days, but the procedure differs between direct and indirect taxes.','An appeal is not a complaint. An appeal challenges whether a tax or penalty decision is correct; a complaint concerns HMRC’s service, such as unreasonable delay or poor conduct. Sending the wrong type of challenge can waste valuable time.','This guide explains the broad UK process, evidence and options. Appeal rights are statutory and decision-specific, so use the instructions in your letter and obtain professional advice where the amount or principle matters.'],

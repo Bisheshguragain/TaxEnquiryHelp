@@ -3,3 +3,20 @@
 @media(max-width:520px){.field-row{grid-template-columns:1fr}.contact-card{padding:25px 18px}}
 .contact-email{display:grid;gap:9px;margin:27px 0;padding:23px 24px;border:1px solid #e3c783;border-left:5px solid #b57616;border-radius:11px;background:#fff6dc;box-shadow:0 10px 24px rgba(117,75,10,.08)}.contact-email span{color:#8b5709;text-transform:uppercase;letter-spacing:1.35px;font-size:12px;font-weight:700}.contact-email a{color:#603b05;font:700 19px 'Manrope',sans-serif;text-decoration:underline;text-decoration-color:#d6a84c;text-underline-offset:4px;overflow-wrap:anywhere}.contact-email p{color:#665333;font-size:14px;line-height:1.65;margin:4px 0 0}
 .contact-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}.contact-form-error{margin:0;padding:11px 13px;border:1px solid #e9bbb3;border-radius:8px;background:#fff3f1;color:#8b2e21;font-size:12px;line-height:1.5}.contact-submit:disabled{cursor:wait;opacity:.72}.contact-consent a{color:#0b7552;text-decoration:underline}
+
+/* Larger contact-form and urgent-deadline typography. */
+.contact-card-head>span{font-size:12px}
+.contact-card-head p{font-size:16px;line-height:1.65}
+.contact-form{gap:18px}
+.contact-form label{font-size:14px;line-height:1.45}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{font-size:15px;line-height:1.45;padding:13px}
+.contact-consent{font-size:14px;line-height:1.6}
+.contact-consent input{width:17px;height:17px}
+.contact-submit{font-size:15px;padding:16px 21px}
+.form-security{font-size:12px;line-height:1.6}
+.contact-form-error{font-size:14px}
+.contact-emergency h2{font-size:30px;line-height:1.25}
+.contact-emergency p{font-size:16px;line-height:1.7}
+.contact-emergency a{font-size:15px;padding:15px 20px}

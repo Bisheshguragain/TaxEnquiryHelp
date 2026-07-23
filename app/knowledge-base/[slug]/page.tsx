@@ -6,6 +6,32 @@ import '../knowledge.css';
 
 export function generateStaticParams(){return guides.map(g=>({slug:g.slug}))}
 
+const guideEnquiryCategory: Record<string,string> = {
+  'what-is-an-hmrc-compliance-check': 'compliance-check',
+  'hmrc-self-assessment-enquiry-guide': 'self-assessment-enquiry',
+  'appeal-hmrc-tax-penalty': 'penalties-and-tax-appeals',
+  'hmrc-property-income-enquiry': 'self-assessment-enquiry',
+  'hmrc-crypto-tax-enquiry': 'undeclared-income-disclosure',
+  'hmrc-foreign-income-enquiry': 'undeclared-income-disclosure',
+  'can-hmrc-ask-for-bank-statements': 'compliance-check',
+  'section-9a-enquiry-letter-response': 'self-assessment-enquiry',
+  'hmrc-vat-compliance-check': 'vat-paye-enquiry',
+  'hmrc-paye-employer-compliance-check': 'vat-paye-enquiry',
+  'hmrc-corporation-tax-enquiry': 'compliance-check',
+  'hmrc-cis-compliance-check': 'vat-paye-enquiry',
+  'hmrc-rd-tax-relief-enquiry': 'compliance-check',
+  'hmrc-code-of-practice-8-investigation': 'cop8-cop9-investigation',
+  'hmrc-code-of-practice-9-cdf': 'cop8-cop9-investigation',
+  'hmrc-schedule-36-information-notice': 'compliance-check',
+  'hmrc-discovery-assessment': 'penalties-and-tax-appeals',
+  'hmrc-closure-notice-and-adr': 'penalties-and-tax-appeals',
+  'hmrc-use-of-home-expenses-enquiry': 'self-assessment-enquiry',
+  'hmrc-management-fees-enquiry': 'compliance-check',
+  'hmrc-overdrawn-directors-loan-account-enquiry': 'compliance-check',
+  'companies-house-accounts-vs-hmrc-tax-return': 'compliance-check',
+  'dormant-company-companies-house-hmrc': 'compliance-check',
+};
+
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
   const {slug}=await params;
   const g=guides.find(x=>x.slug===slug);
@@ -24,7 +50,10 @@ export default async function GuidePage({params}:{params:Promise<{slug:string}>}
   const g=guides.find(x=>x.slug===slug);
   if(!g)notFound();
   const url=`https://www.taxenquiryhelp.co.uk/knowledge-base/${g.slug}`;
-  const articleSchema={'@context':'https://schema.org','@type':'Article',headline:g.title,description:g.description,datePublished:'2026-07-17',dateModified:'2026-07-17',author:{'@type':'Organization',name:'TaxEnquiryHelp'},publisher:{'@type':'Organization',name:'TaxEnquiryHelp'},mainEntityOfPage:url};
+  const modified=g.reviewed==='23 July 2026'?'2026-07-23':'2026-07-17';
+  const enquiryCategory=guideEnquiryCategory[g.slug];
+  const enquiryUrl=enquiryCategory?`/?category=${enquiryCategory}#enquiry`:'/#enquiry';
+  const articleSchema={'@context':'https://schema.org','@type':'Article',headline:g.title,description:g.description,datePublished:'2026-07-17',dateModified:modified,author:{'@type':'Organization',name:'TaxEnquiryHelp Editorial'},publisher:{'@type':'Organization',name:'TaxEnquiryHelp'},mainEntityOfPage:url};
   const crumbSchema={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://www.taxenquiryhelp.co.uk'},{'@type':'ListItem',position:2,name:'Knowledge Base',item:'https://www.taxenquiryhelp.co.uk/knowledge-base'},{'@type':'ListItem',position:3,name:g.shortTitle,item:url}]};
   const faqSchema={'@context':'https://schema.org','@type':'FAQPage',mainEntity:g.faqs.map(([q,a])=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}}))};
   return <main className="kb article-page">
@@ -38,7 +67,7 @@ export default async function GuidePage({params}:{params:Promise<{slug:string}>}
           <header className="guide-header">
             <div className="guide-label">{g.category}</div>
             <h1>{g.title}</h1><p className="guide-dek">{g.description}</p>
-            <div className="byline"><span>By TaxEnquiryHelp Editorial</span><span>Updated {g.updated}</span></div>
+            <div className="byline"><span>By TaxEnquiryHelp Editorial</span><span>Reviewed {g.reviewed??g.updated}</span></div>
           </header>
           <aside className="guide-at-glance" aria-label="Guide at a glance">
             <div><span>Primary topic</span><strong>{g.keyword}</strong></div>
@@ -58,7 +87,7 @@ export default async function GuidePage({params}:{params:Promise<{slug:string}>}
           <aside className="medical-note"><b>Important:</b> This article provides general information, not advice. Tax outcomes depend on the precise notice, tax, period and facts.</aside>
         </div>
         <aside className="guide-side">
-          <div className="help-box"><span>Need specialist support?</span><h2>Received a letter from HMRC?</h2><p>Tell us what has happened and find the right next step.</p><Link href="/#enquiry">Start a confidential enquiry →</Link></div>
+          <div className="help-box"><span>Need specialist support?</span><h2>Received a letter from HMRC?</h2><p>Tell us what has happened and find the right next step.</p><Link href={enquiryUrl}>Start a confidential enquiry →</Link></div>
           <div className="related"><b>Related guides</b>{guides.filter(x=>x.slug!==g.slug&&x.category===g.category).slice(0,4).map(x=><Link key={x.slug} href={`/knowledge-base/${x.slug}`}>{x.shortTitle}<span>→</span></Link>)}</div>
         </aside>
       </article>

@@ -42,3 +42,12 @@ export const faqGroups = [
     ['What is an HMRC statutory review?','It is a review by an HMRC officer who was not involved in the original decision. The reviewer may uphold, vary or cancel the decision, and GOV.UK says reviews usually take 45 days.']
   ]}
 ] as const;
+
+export const faqGroupAnchors:Record<string,string>={
+  'Self Assessment enquiry':'self-assessment-enquiry-faqs',
+  'HMRC compliance check':'hmrc-compliance-check-faqs',
+  'VAT or PAYE enquiry':'vat-and-paye-enquiry-faqs',
+  'Code of Practice 8 or 9':'cop8-and-cop9-faqs',
+  'Undeclared income':'undeclared-income-faqs',
+  'HMRC penalties or appeal':'hmrc-penalties-and-appeals-faqs'
+};

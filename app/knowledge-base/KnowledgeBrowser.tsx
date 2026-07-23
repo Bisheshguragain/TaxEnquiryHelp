@@ -44,7 +44,7 @@ const categoryDetails = {
 
 const GuideCard = ({ guide, index }: { guide: typeof guides[number]; index: number }) => {
   const featured=featuredPosition(guide.slug)!==-1;
-  return <article className={`kb-guide-card kb-guide-tone-${index%3+1}${featured?' kb-featured-card':''}`}>
+  return <article className={`kb-guide-card kb-guide-category-${guide.category.toLowerCase()}${featured?' kb-featured-card':''}`}>
     {featured&&<div className="kb-featured-badge" aria-label="Featured guide">★ Featured</div>}
     <div className="kb-card-meta"><span>{guide.category}</span></div>
     <div className="kb-card-number">{String(index+1).padStart(2,'0')}</div>

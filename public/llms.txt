@@ -4,13 +4,14 @@
 
 Canonical website: https://www.taxenquiryhelp.co.uk/
 Language and market: English (United Kingdom)
-Last updated: 2026-07-17
+Last updated: 2026-07-23
 
 ## Primary pages
 
 - [HMRC tax enquiry help](https://www.taxenquiryhelp.co.uk/): Service overview, three-step enquiry journey and common HMRC questions.
 - [HMRC tax enquiry knowledge base](https://www.taxenquiryhelp.co.uk/knowledge-base): All guides, filterable by Individual, Business and General categories.
 - [HMRC tax enquiry FAQs](https://www.taxenquiryhelp.co.uk/faqs): Categorised answers covering six common enquiry types.
+- [HMRC problem pages](https://www.taxenquiryhelp.co.uk/hmrc-problems): Focused action pages for HMRC letters, evidence requests, penalty notices and tax return errors.
 - [Contact TaxEnquiryHelp](https://www.taxenquiryhelp.co.uk/contact): Contact details and confidential enquiry form.
 
 ## Core guides
