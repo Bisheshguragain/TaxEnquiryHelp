@@ -78,11 +78,13 @@ export default function Home({ featuredGuides, latestGuides }: HomeProps) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const category = params.get('category');
+    const detail = params.get('detail');
     const issue = category ? enquiryCategoryNames[category] : null;
     if (issue) {
       setSelectedIssue(issue);
-      setSelectedDetail(null);
-      setEnquiryStep(2);
+      const validDetail=detail&&enquiryPaths[issue].options.includes(detail)?detail:null;
+      setSelectedDetail(validDetail);
+      setEnquiryStep(validDetail?3:2);
     }
   }, []);
   const chooseIssue = (issue: string) => { setSelectedIssue(issue); setSelectedDetail(null); setEnquiryStep(2); };

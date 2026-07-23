@@ -66,5 +66,15 @@ h1,h2,h3,.brand{font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Sego
 #enquiry,#support,#process,#guides,#faqs{scroll-margin-top:100px}
 .site-footer .footer-bottom{font-size:14px;line-height:1.5}
 .site-footer .disclaimer{font-size:13px;line-height:1.75;max-width:1080px}
+
+/* Wider desktop canvas while preserving readable text measures and mobile spacing. */
+@media(min-width:1280px){
+  .site-header{padding-left:max(32px,calc((100vw - 1320px)/2));padding-right:max(32px,calc((100vw - 1320px)/2))}
+  .hero{padding-left:max(32px,calc((100vw - 1280px)/2));padding-right:max(32px,calc((100vw - 1280px)/2))}
+  .reassurance{padding-left:max(32px,calc((100vw - 1280px)/2));padding-right:max(32px,calc((100vw - 1280px)/2))}
+  .section{width:calc(100% - 64px);max-width:1280px}
+  .final-cta{width:calc(100% - 64px);max-width:1280px}
+  footer,.site-footer{padding-left:max(32px,calc((100vw - 1280px)/2));padding-right:max(32px,calc((100vw - 1280px)/2))}
+}
 .site-footer .powered-by{color:var(--mint);font-size:13px;line-height:1.6;margin-top:18px}.site-footer .powered-by strong{color:#fff}
 .site-footer .footer-urgent{margin:20px 0 8px;color:#f2d38c;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px}.site-footer .footer-email{display:inline-block!important;margin:0!important;padding:10px 12px;border:1px solid #dba945;border-radius:8px;background:#3b310f;color:#ffe6a7!important;font-size:13px!important;font-weight:700;overflow-wrap:anywhere;box-shadow:0 6px 16px rgba(0,0,0,.16)}.site-footer .footer-email:hover{background:#554715;color:#fff4d2!important}

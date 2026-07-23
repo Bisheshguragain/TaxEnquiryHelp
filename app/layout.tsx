@@ -10,7 +10,7 @@ import SiteHeader from './components/SiteHeader';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.taxenquiryhelp.co.uk'),
-  title: { default: 'HMRC Tax Enquiry Help UK | TaxEnquiryHelp', template: '%s | TaxEnquiryHelp' },
+  title: { default: 'HMRC Tax Enquiry Help UK | TaxEnquiryHelp', template: '%s' },
   description: 'Specialist help with HMRC tax enquiries, investigations, compliance checks, penalties and appeals across the UK. Understand your letter and next steps.',
   keywords: ['HMRC tax enquiry help','HMRC tax investigation help','HMRC compliance check','HMRC letter help','Self Assessment enquiry','appeal HMRC penalty','tax investigation specialist UK'],
   applicationName: 'TaxEnquiryHelp',
@@ -24,8 +24,21 @@ export const metadata: Metadata = {
   },
   referrer: 'origin-when-cross-origin',
   alternates: { canonical: '/' },
-  openGraph: { title: 'HMRC tax enquiry help, made clear', description: 'Practical, specialist support for HMRC enquiries and compliance checks across the UK.', url: '/', siteName: 'TaxEnquiryHelp', locale: 'en_GB', type: 'website' },
-  twitter: { card: 'summary_large_image', title: 'HMRC tax enquiry help | TaxEnquiryHelp', description: 'Specialist support for HMRC enquiries across the UK.' },
+  openGraph: {
+    title: 'HMRC tax enquiry help, made clear',
+    description: 'Practical, specialist support for HMRC enquiries and compliance checks across the UK.',
+    url: '/',
+    siteName: 'TaxEnquiryHelp',
+    locale: 'en_GB',
+    type: 'website',
+    images: [{ url: '/og-tax-enquiry-help.png', width: 1200, height: 630, alt: 'TaxEnquiryHelp — HMRC enquiry support, made clear' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'HMRC tax enquiry help | TaxEnquiryHelp',
+    description: 'Specialist support for HMRC enquiries across the UK.',
+    images: ['/og-tax-enquiry-help.png'],
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
 };
 

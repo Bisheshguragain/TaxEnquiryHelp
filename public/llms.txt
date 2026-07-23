@@ -12,6 +12,7 @@ Last updated: 2026-07-23
 - [HMRC tax enquiry knowledge base](https://www.taxenquiryhelp.co.uk/knowledge-base): All guides, filterable by Individual, Business and General categories.
 - [HMRC tax enquiry FAQs](https://www.taxenquiryhelp.co.uk/faqs): Categorised answers covering six common enquiry types.
 - [HMRC problem pages](https://www.taxenquiryhelp.co.uk/hmrc-problems): Focused action pages for HMRC letters, evidence requests, penalty notices and tax return errors.
+- [Industry-specific HMRC guidance](https://www.taxenquiryhelp.co.uk/industries): Focused enquiry guidance for landlords, construction and CIS businesses, hospitality businesses, online sellers, drivers and healthcare professionals.
 - [Contact TaxEnquiryHelp](https://www.taxenquiryhelp.co.uk/contact): Contact details and confidential enquiry form.
 
 ## Core guides

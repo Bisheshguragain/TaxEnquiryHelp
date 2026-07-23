@@ -1,10 +1,14 @@
+import {phase4Problems} from './phase4-problems';
+
 export type ProblemPage = {
   slug: string;
-  category: 'Letters and requests' | 'Return errors' | 'Penalties';
+  category: 'Letters and requests' | 'Return errors' | 'Penalties' | 'Income and evidence' | 'Property and disclosures' | 'Business tax checks';
   title: string;
   description: string;
   directAnswer: string;
   enquiryCategory: string;
+  enquiryDetail?: string;
+  relatedQuestion?: { title: string; href: string };
   canonicalGuide: { title: string; href: string };
   sections: { title: string; paragraphs: string[]; bullets?: string[] }[];
   actions: string[];
@@ -14,7 +18,7 @@ export type ProblemPage = {
   sources: [string, string][];
 };
 
-export const problems: ProblemPage[] = [
+const initialProblems: ProblemPage[] = [
   {
     slug: 'hmrc-nudge-letter',
     category: 'Letters and requests',
@@ -119,7 +123,7 @@ export const problems: ProblemPage[] = [
     slug: 'vat-return-error',
     category: 'Return errors',
     title: 'VAT Return Error: How to Correct It and Tell HMRC',
-    description: 'Found an error on a submitted VAT Return? Understand current correction methods, evidence, time limits, penalties and what changes when HMRC has started a check.',
+    description: 'Found an error on a submitted VAT Return? Check the current correction method, evidence, time limits, penalties and action during an HMRC check.',
     directAnswer: 'A VAT Return error should be recorded and corrected using the method that applies to its net value and circumstances. HMRC’s current service may direct you to update a later return, correct the error online or notify HMRC in writing. Preserve the error calculation and do not use an old VAT652 process. Deliberate, careless and already-investigated errors need particular care.',
     enquiryCategory: 'vat-paye-enquiry',
     canonicalGuide: { title: 'HMRC VAT compliance check guide', href: '/knowledge-base/hmrc-vat-compliance-check' },
@@ -256,3 +260,5 @@ export const problems: ProblemPage[] = [
     sources: [['GOV.UK: Let Property Campaign guide', 'https://www.gov.uk/government/publications/let-property-campaign-your-guide-to-making-a-disclosure/let-property-campaign-your-guide-to-making-a-disclosure'], ['GOV.UK: Paying tax on rental income', 'https://www.gov.uk/renting-out-a-property/paying-tax']]
   }
 ];
+
+export const problems:ProblemPage[]=[...initialProblems,...phase4Problems];

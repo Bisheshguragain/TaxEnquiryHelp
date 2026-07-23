@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Contact TaxEnquiryHelp | HMRC Enquiry Support',
   description: 'Contact TaxEnquiryHelp for confidential support with an HMRC tax enquiry, compliance check, investigation, disclosure, penalty or appeal in the UK.',
   alternates: { canonical: '/contact' },
-  openGraph: { title: 'Contact TaxEnquiryHelp', description: 'Get in touch about an HMRC enquiry or tax investigation.', type: 'website', locale: 'en_GB' },
+  openGraph: { title: 'Contact TaxEnquiryHelp', description: 'Get in touch about an HMRC enquiry or tax investigation.', type: 'website', locale: 'en_GB', images: ['/og-tax-enquiry-help.png'] },
 };
 
 export default function ContactPage() {

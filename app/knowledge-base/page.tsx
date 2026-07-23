@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {problems} from '../hmrc-problems/problems';
 import {questionClusterAnchors,questionClusters,questions} from '../hmrc-questions/questions';
 import {faqGroupAnchors,faqGroups} from './faqs';
+import {guides} from './guides';
 import './knowledge.css';
 
 export const metadata: Metadata={
@@ -16,8 +17,9 @@ export default function KnowledgeBase(){return <main className="kb">
   <section className="kb-hero"><div className="kb-wrap"><p className="kb-kicker">TaxEnquiryHelp Knowledge Hub</p><h1>Clear guidance for difficult HMRC situations.</h1><p>Explore comprehensive guides, focused problem pages and direct answers for UK individuals and businesses dealing with tax enquiries, compliance checks, penalties and appeals.</p></div></section>
   <section className="kb-wrap kb-main">
     <nav className="hub-choices" aria-label="Choose a Knowledge Hub library">
-      <a className="hub-choice hub-choice-guides" href="#guides-and-problems"><span>01 · In-depth resources</span><h2>Guides &amp; HMRC Problems</h2><p>Browse comprehensive guides and immediate-action pages for letters, checks, penalties and return errors.</p><strong>Explore 35 resources →</strong></a>
+      <a className="hub-choice hub-choice-guides" href="#guides-and-problems"><span>01 · In-depth resources</span><h2>Guides &amp; HMRC Problems</h2><p>Browse comprehensive guides and immediate-action pages for letters, checks, penalties and return errors.</p><strong>Explore {guides.length+problems.length} resources →</strong></a>
       <a className="hub-choice hub-choice-answers" href="#questions-and-faqs"><span>02 · Direct answers</span><h2>Questions &amp; FAQs</h2><p>Find focused explanations and shorter answers organised around the six main HMRC enquiry categories.</p><strong>Explore answers →</strong></a>
+      <a className="hub-choice hub-choice-industries" href="/industries"><span>03 · Industry pilot</span><h2>Industry-specific guidance</h2><p>Focused HMRC enquiry pathways for six distinct sectors, including landlords, construction, hospitality, drivers and healthcare.</p><strong>Explore six industries →</strong></a>
     </nav>
 
     <section className="hub-library-section" id="guides-and-problems" aria-labelledby="guides-problems-title">

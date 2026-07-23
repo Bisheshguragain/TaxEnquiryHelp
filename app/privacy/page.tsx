@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import LegalPage,{LegalSection} from '../components/LegalPage';
 import '../legal.css';
 
-export const metadata:Metadata={title:'Privacy Notice | TaxEnquiryHelp',description:'How TaxEnquiryHelp collects, uses, shares, secures and retains personal information under UK data protection law.',alternates:{canonical:'/privacy'}};
+export const metadata:Metadata={title:'Privacy Notice | TaxEnquiryHelp',description:'Read how TaxEnquiryHelp collects, uses, shares, protects and retains personal information under UK GDPR and UK data protection law.',alternates:{canonical:'/privacy'}};
 
 export default function Privacy(){return <LegalPage eyebrow="UK GDPR privacy information" title="Privacy notice" intro="This notice explains how personal information is handled when you visit TaxEnquiryHelp, submit an enquiry or communicate with TaxEnquiryHelp. It also explains how information may be shared with an independent professional firm selected to provide services for your requirements.">
   <LegalSection number="01" title="Who is responsible for your information"><p>TaxEnquiryHelp is the data controller for personal information collected through this website until that information is lawfully transferred to, or collected directly by, an independent professional firm. That firm will normally become a separate controller for the information it uses to assess, accept and deliver professional services.</p><p>Privacy enquiries and data-protection requests may be sent to <a href="mailto:Hello@TaxEnquiryHelp.co.uk">Hello@TaxEnquiryHelp.co.uk</a> or by post to TaxEnquiryHelp, Devonshire House, Level 1, One Mayfair Place, Mayfair, London, England, W1J 8AJ.</p></LegalSection>

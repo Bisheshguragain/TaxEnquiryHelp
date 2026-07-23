@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import LegalPage,{LegalSection} from '../components/LegalPage';
 import '../legal.css';
 
-export const metadata:Metadata={title:'Cookie Notice | TaxEnquiryHelp',description:'How TaxEnquiryHelp uses cookies and similar storage technologies and how users can manage their choices.',alternates:{canonical:'/cookies'}};
+export const metadata:Metadata={title:'Cookie Notice | TaxEnquiryHelp',description:'Learn how TaxEnquiryHelp uses essential and optional cookies, similar technologies and consent controls, including how to manage your choices.',alternates:{canonical:'/cookies'}};
 
 export default function Cookies(){return <LegalPage eyebrow="PECR and storage technologies" title="Cookie notice" intro="This notice explains cookies and similar technologies used by TaxEnquiryHelp, why they may be used and the choices available to you.">
   <LegalSection number="01" title="What cookies and similar technologies are"><p>Cookies are small files stored on a device. Similar technologies include local storage, tracking pixels, software development kits, device identifiers and techniques that access or store information on a device. UK rules can apply to the technology even where the information is not directly identifying.</p></LegalSection>

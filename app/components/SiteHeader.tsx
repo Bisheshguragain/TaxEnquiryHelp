@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const Arrow = () => <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg>;
 
-const links=[['How we help','/#support'],['Knowledge Hub','/knowledge-base'],['HMRC Problems','/hmrc-problems'],['HMRC Questions','/hmrc-questions'],['Contact us','/contact']] as const;
+const links=[['How we help','/#support'],['Knowledge Hub','/knowledge-base'],['HMRC Problems','/hmrc-problems'],['Industries','/industries'],['HMRC Questions','/hmrc-questions'],['Contact us','/contact']] as const;
 const urgentEmail='mailto:Hello@TaxEnquiryHelp.co.uk?subject=Urgent%20HMRC%20enquiry%20%E2%80%93%20response%20deadline&body=Hello%20TaxEnquiryHelp%2C%0D%0A%0D%0APlease%20review%20my%20urgent%20HMRC%20enquiry.%0D%0A%0D%0AFull%20name%3A%20%0D%0AContact%20number%3A%20%0D%0AType%20of%20HMRC%20enquiry%3A%20%0D%0ADate%20of%20HMRC%20letter%3A%20%0D%0AResponse%20deadline%3A%20%0D%0ABrief%20summary%3A%20%0D%0A%0D%0APlease%20do%20not%20include%20your%20UTR%2C%20National%20Insurance%20number%20or%20sensitive%20documents%20in%20this%20initial%20email.';
 
 export default function SiteHeader(){

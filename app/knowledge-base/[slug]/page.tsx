@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { guides } from '../guides';
+import {makeSeoTitle} from '../../seo-title';
 import '../knowledge.css';
 
 export function generateStaticParams(){return guides.map(g=>({slug:g.slug}))}
@@ -36,12 +37,12 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const {slug}=await params;
   const g=guides.find(x=>x.slug===slug);
   if(!g)return{};
-  const seoTitle=`${g.keyword}: UK Guide | TaxEnquiryHelp`;
+  const seoTitle=makeSeoTitle(`${g.keyword}: UK Guide`);
   return {
     title:{absolute:seoTitle},description:g.description,keywords:[g.keyword,...(g.secondaryKeywords??[])],
     alternates:{canonical:`/knowledge-base/${g.slug}`},
-    openGraph:{title:seoTitle,description:g.description,url:`/knowledge-base/${g.slug}`,type:'article',locale:'en_GB',siteName:'TaxEnquiryHelp'},
-    twitter:{card:'summary_large_image',title:seoTitle,description:g.description}
+    openGraph:{title:seoTitle,description:g.description,url:`/knowledge-base/${g.slug}`,type:'article',locale:'en_GB',siteName:'TaxEnquiryHelp',images:['/og-tax-enquiry-help.png']},
+    twitter:{card:'summary_large_image',title:seoTitle,description:g.description,images:['/og-tax-enquiry-help.png']}
   };
 }
 
