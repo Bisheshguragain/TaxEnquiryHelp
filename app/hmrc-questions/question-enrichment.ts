@@ -498,5 +498,71 @@ export const questionEnrichment: Record<string, QuestionEnrichment> = {
     'Example: penalty appeal rejected',
     ['HMRC rejects a reasonable-excuse appeal and offers a statutory review. The taxpayer updates the chronology and evidence, then decides whether review or tribunal is more appropriate.', 'Any payment or collection issue is handled separately, and the next statutory deadline is not left to informal negotiation.'],
     ['The rejection gives unclear options', 'Tribunal proceedings are being considered', 'Collection action is continuing during the dispute']
+  ),
+  'hmrc-asking-for-epos-till-records': focused(
+    [
+      'Begin with the exact request. Identify the tax, accounting periods, premises, till systems and file formats covered. An informal request and a formal information notice can have different consequences, but either should be answered using preserved source data and a clear document index.',
+      'Build the reconciliation in layers: EPOS gross sales by day and channel, VAT-rate allocation, refunds, voids and discounts, cash and card split, delivery-platform activity, deposits, and finally the sales ledger, VAT account and annual accounts. This prevents a bank-settlement difference being mistaken for missing turnover.',
+      'Test the system history as well as the headline totals. Till configuration changes, replacement terminals, manual keys, refunds and missing trading days should be explained contemporaneously. If records are unavailable, document why and use independent replacement evidence without reconstructing supposed originals.'
+    ],
+    [['Scope and format', 'Confirm which systems, outlets, reports and periods HMRC is asking to inspect.'], ['Gross-to-return bridge', 'Reconcile source sales to VAT submissions and accounts, not merely to bank deposits.'], ['Data integrity', 'Preserve native exports and audit history before changing, migrating or replacing an EPOS system.']],
+    'Example: EPOS sales exceed card deposits',
+    ['A restaurant’s EPOS total exceeds card deposits because it includes cash, delivery-platform orders and transactions settled after the period end. Refunds and staff discounts also appear in different system reports.', 'The business creates a daily bridge identifying each channel and adjustment, then ties VAT-rate totals to the VAT account. It does not simply deduct the entire difference as card commission.'],
+    ['HMRC requests unrestricted system access', 'Historical data is incomplete or has been overwritten', 'The reconciliation identifies undeclared sales or incorrect VAT rates']
+  ),
+  'hmrc-letter-online-marketplace-income': focused(
+    [
+      'Read the HMRC letter before deciding whether it is an enquiry, a nudge letter or another information request. Record the response date and the platforms, calendar years and amounts HMRC identifies. Confirm that the seller name and account data actually belong to the taxpayer.',
+      'Platform information is an evidence source, not the final tax answer. Reconcile the platform’s reporting period and figures to UK tax years, gross transactions, refunds, fees and payment accounts. Keep personal disposals, trading activity and any capital-gains analysis in separate schedules.',
+      'If taxable income was omitted, check whether a return can still be amended or another disclosure route is required. The chronology matters when considering whether a disclosure was prompted, so do not ignore the letter or describe a later correction inaccurately.'
+    ],
+    [['What type of HMRC letter?', 'Identify the legal and procedural status before choosing a response route.'], ['What activity produced the sales?', 'Separate personal disposals, trading, services and any other source using transaction evidence.'], ['Which years need correction?', 'Convert calendar-year platform information to the relevant UK tax years and check every affected return.']],
+    'Example: Vinted report includes a wardrobe clearance and resale stock',
+    ['A seller receives a letter quoting a platform total. The account contains old family clothing and a smaller stream of branded goods purchased for resale.', 'Listings, original purchase evidence and stock invoices are used to separate the activities. Trading profit is calculated for resale goods, while personal disposals are reviewed under the appropriate rules rather than treating the full platform total as taxable income.'],
+    ['Several platforms or years are involved', 'The seller cannot distinguish private items from resale stock', 'HMRC alleges careless or deliberate non-disclosure']
+  ),
+  'online-selling-trading-or-personal-possessions': focused(
+    [
+      'No single fact decides whether online selling is a trade. Consider why items were acquired, the frequency and repetition of sales, work done to make them more marketable, the interval between purchase and sale, and whether the activity is organised commercially. Apply those indicators to the complete facts rather than using a platform label.',
+      'Personal possessions can still require a Capital Gains Tax review, while trading uses income-tax profit rules. Keep these computations separate. A seller may also have a mixed account, so platform-level totals should be classified at transaction level before allowances are considered.',
+      'The digital-platform reporting exception for some low-volume goods sellers is not a tax exemption. Likewise, the trading allowance has its own conditions and can affect expense claims. Establish receipts and activity first, then apply the relevant rule.'
+    ],
+    [['Purpose at acquisition', 'Evidence whether goods were acquired for personal use or with a view to resale and profit.'], ['Pattern and organisation', 'Review repetition, improvements, marketing, stock and commercial processes together.'], ['Correct tax regime', 'Calculate trading profit and any personal-possession gains separately before applying allowances.']],
+    'Example: handmade products and household items use one account',
+    ['A seller lists unwanted furniture and also makes personalised products each week. The marketplace pays both activities into one bank account.', 'The handmade-product orders are treated as a potential trade with stock and expense records. Household disposals are separately reviewed using ownership and cost evidence, producing a defensible bridge to the platform total.'],
+    ['Transactions cannot be reliably classified', 'High-value personal possessions may create gains', 'VAT registration or several sales channels need reviewing']
+  ),
+  'hmrc-checking-uber-bolt-delivery-app-income': focused(
+    [
+      'Identify every platform, operator account, payment account and period. Download data before access expires. Platform summaries can be calendar-year based, while Self Assessment normally requires a UK tax-year computation, so allocate transactions using underlying dates rather than dividing annual totals mechanically.',
+      'Create a gross-to-net schedule for each platform showing customer activity, cash collected by the driver, tips, incentives, adjustments, refunds, commission and payout. Then consolidate all platforms and direct work without double-counting transfers between payment accounts.',
+      'Turnover and vehicle expenses are separate calculations. After reconciling receipts, test mileage or actual costs, private use and evidence. Employment status and VAT also require the real contractual and supply arrangements; platform reporting does not decide either issue.'
+    ],
+    [['All income channels', 'Include every app, operator, cash fare, direct job, tip and incentive.'], ['Calendar year versus tax year', 'Use transaction dates to reconcile platform information to returns.'], ['Gross receipts versus profit', 'Keep the receipts bridge separate from commissions and allowable-expense analysis.']],
+    'Example: two apps and cash fares',
+    ['A driver declared the payouts received from one app. HMRC data includes gross bookings from that app, while a second platform and cash airport work are absent from the original calculation.', 'The driver exports both transaction histories, identifies cash already retained, and creates a combined tax-year schedule. Commission and vehicle costs are then considered separately so neither is hidden inside turnover.'],
+    ['Platform access or records are missing', 'Several tax years or VAT registration are affected', 'Status differs across platform or operator arrangements']
+  ),
+  'hmrc-locum-employment-status-check': focused(
+    [
+      'Map the contractual chain before applying status indicators. A hospital or practice may engage the clinician directly, through an agency or through an intermediary. Each route can engage different provisions, and the person responsible for PAYE must be identified rather than assumed.',
+      'Compare the written agreement with actual practice. Establish who could require personal service, arrange substitution, set sessions, cancel work, control where and when duties were performed, provide facilities, carry financial risk and integrate the clinician into the organisation. Clinical judgement does not answer every aspect of control.',
+      'Review engagements separately. HMRC’s manual specifically cautions against assuming that a doctor standing in for another has the same status. Record changes between practices and assignments and reconcile the resulting treatment to payroll, company accounts and personal returns.'
+    ],
+    [['Contractual chain', 'Identify the engager, agency, worker and intermediary for every assignment.'], ['Written and actual terms', 'Test whether day-to-day practice supports the rights stated in the contract.'], ['Applicable rules', 'Consider ordinary status, agency and off-payroll provisions before deciding responsibility.']],
+    'Example: locum works through an agency and directly',
+    ['A doctor accepts hospital shifts through an agency and separate sessions directly from a GP practice. Both were invoiced through the same company and described as self-employed.', 'The arrangements are reviewed separately. Agency terms, supervision and payment rules are analysed for the hospital work, while substitution, scheduling and financial risk are tested for the direct practice engagement.'],
+    ['An agency or personal service company is involved', 'Contracts conflict with actual working practice', 'HMRC proposes PAYE, National Insurance, interest or penalties']
+  ),
+  'vat-on-medical-services-hmrc-check': focused(
+    [
+      'Inventory supplies rather than customers or job titles. For each service, identify the supplier entity, professional delivering it, recipient, contractual purpose and deliverable. A clinic can make exempt therapeutic supplies and taxable reports, training, cosmetic or administrative supplies in the same VAT period.',
+      'Apply both principal conditions in HMRC VAT Notice 701/57: the service must be within the profession in which the health professional is registered, and its primary purpose must be protecting, maintaining or restoring the patient’s health. Reports mainly enabling a third party to decide a claim or legal issue can have a different liability.',
+      'Once taxable and exempt supplies are classified, test registration and input-tax recovery. Exempt income does not count as taxable turnover, while a partly exempt business may be unable to recover all input VAT. Document the basis for borderline services and review bundled supplies carefully.'
+    ],
+    [['Who makes the supply?', 'Identify the legal supplier, professional status and recipient instead of relying on the clinician’s title.'], ['What is its primary purpose?', 'Use contracts, referrals and deliverables to distinguish therapeutic care from decision-making or cosmetic purposes.'], ['What follows for VAT?', 'Review registration, invoicing, error correction and partial-exemption consequences.']],
+    'Example: treatment, reports and cosmetic services',
+    ['A clinic treats injuries, supplies reports for litigation and offers appearance-led procedures. Its accounting system marks all clinician income as exempt.', 'The clinic reviews each service against its purpose and evidence. Therapeutic treatment, third-party reports and cosmetic work are classified separately, after which taxable turnover and input-tax recovery are recalculated.'],
+    ['The same service has mixed therapeutic and non-therapeutic purposes', 'Historic VAT treatment may be wrong', 'Partial exemption or a registration threshold is affected']
   )
 };

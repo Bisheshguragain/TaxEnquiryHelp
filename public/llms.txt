@@ -4,7 +4,7 @@
 
 Canonical website: https://www.taxenquiryhelp.co.uk/
 Language and market: English (United Kingdom)
-Last updated: 2026-07-23
+Last updated: 2026-07-31
 
 ## Primary pages
 
@@ -58,6 +58,15 @@ Last updated: 2026-07-23
 - Code of Practice 8 and Code of Practice 9
 - Undeclared income and voluntary disclosure
 - HMRC penalties, statutory reviews and tax appeals
+
+## Focused industry questions
+
+- [HMRC asking for EPOS and till records](https://www.taxenquiryhelp.co.uk/hmrc-questions/hmrc-asking-for-epos-till-records)
+- [HMRC letter about eBay, Etsy, Amazon or Vinted income](https://www.taxenquiryhelp.co.uk/hmrc-questions/hmrc-letter-online-marketplace-income)
+- [Online selling: trading or personal possessions?](https://www.taxenquiryhelp.co.uk/hmrc-questions/online-selling-trading-or-personal-possessions)
+- [HMRC checking Uber, Bolt or delivery-app income](https://www.taxenquiryhelp.co.uk/hmrc-questions/hmrc-checking-uber-bolt-delivery-app-income)
+- [HMRC locum employment status check](https://www.taxenquiryhelp.co.uk/hmrc-questions/hmrc-locum-employment-status-check)
+- [VAT on medical services: what HMRC may check](https://www.taxenquiryhelp.co.uk/hmrc-questions/vat-on-medical-services-hmrc-check)
 
 ## Source and citation policy
 

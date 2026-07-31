@@ -182,7 +182,7 @@ export default function Home({ featuredGuides, latestGuides }: HomeProps) {
         <p>An HMRC letter can feel urgent and unclear. We help you understand what HMRC is asking, what information matters, and the practical route forward.</p>
       </section>
       <section className="issue-grid section tight">
-        {issues.map(([title,body,slug],i)=><article className={`issue-card issue-color-${i+1}`} key={title}><div className="issue-num">0{i+1}</div><h3><a href={`/hmrc-enquiry-help/${slug}`}>{title}</a></h3><p>{body}</p><div className="issue-actions"><a href={`/hmrc-enquiry-help/${slug}`} aria-label={`Explore more about ${title}`}>Explore more</a><button className="issue-link" onClick={()=>startSpecialistFlow(title)} aria-label={`Get specialist help with ${title}`}>Get specialist help <Arrow /></button></div></article>)}
+        {issues.map(([title,body,slug],i)=><article className={`issue-card issue-color-${i+1}`} key={title}><h3><a href={`/hmrc-enquiry-help/${slug}`}>{title}</a></h3><p>{body}</p><div className="issue-actions"><a href={`/hmrc-enquiry-help/${slug}`} aria-label={`Explore more about ${title}`}>Explore more</a><button className="issue-link" onClick={()=>startSpecialistFlow(title)} aria-label={`Get specialist help with ${title}`}>Get specialist help <Arrow /></button></div></article>)}
       </section>
 
       <section className="process" id="process"><div className="section">

@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...['privacy','cookies','terms'].map(slug=>({url:`${base}/${slug}`,lastModified:updated,changeFrequency:'yearly' as const,priority:.2})),
     ...guides.map(guide=>({url:`${base}/knowledge-base/${guide.slug}`,lastModified:new Date(guide.reviewed==='23 July 2026'?'2026-07-23':'2026-07-17'),changeFrequency:'monthly' as const,priority:.8})),
     ...enquiryServices.map(service=>({url:`${base}/hmrc-enquiry-help/${service.slug}`,lastModified:updated,changeFrequency:'monthly' as const,priority:.9})),
-    ...questions.map(question=>({url:`${base}/hmrc-questions/${question.slug}`,lastModified:new Date('2026-07-23'),changeFrequency:'monthly' as const,priority:.75})),
+    ...questions.map(question=>({url:`${base}/hmrc-questions/${question.slug}`,lastModified:new Date(['hmrc-asking-for-epos-till-records','hmrc-letter-online-marketplace-income','online-selling-trading-or-personal-possessions','hmrc-checking-uber-bolt-delivery-app-income','hmrc-locum-employment-status-check','vat-on-medical-services-hmrc-check'].includes(question.slug)?'2026-07-31':'2026-07-23'),changeFrequency:'monthly' as const,priority:.75})),
     ...problems.map(problem=>({url:`${base}/hmrc-problems/${problem.slug}`,lastModified:updated,changeFrequency:'monthly' as const,priority:.82})),
     ...industries.map(industry=>({url:`${base}/industries/${industry.slug}`,lastModified:updated,changeFrequency:'monthly' as const,priority:.78})),
   ];

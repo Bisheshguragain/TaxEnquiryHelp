@@ -15,6 +15,7 @@ export type IndustryPage={
   actions:string[];
   example:{title:string;paragraphs:string[]};
   faqs:[string,string][];
+  supportingQuestions?:{title:string;href:string}[];
   pathway:{problem:{title:string;href:string};question:{title:string;href:string};guide:{title:string;href:string}};
   sources:[string,string][];
 };
@@ -100,6 +101,9 @@ export const industries:IndustryPage[]=[
     actions:['Secure EPOS and platform exports','Reconcile sales by channel and VAT rate','Prepare a daily cash bridge','Review tips, payroll and staff benefits','Test stock, margin and wastage explanations','Submit indexed records with channel-specific reconciliations'],
     example:{title:'Example: delivery-platform sales appear understated',paragraphs:['HMRC compares platform gross order values with the smaller deposits in the restaurant’s bank. The deposits are after commission, refunds and promotional contributions.','The restaurant prepares a gross-to-net platform reconciliation and confirms that accounts and VAT returns began with gross sales. It separately tests the VAT treatment of platform-funded discounts rather than treating commission as a reduction in turnover.']},
     faqs:[['Does every cash difference mean undeclared sales?','No. Cash used for documented expenses, refunds or banking timing may explain differences, but the reconciliation must be reliable.'],['Can HMRC inspect EPOS data?','HMRC may request relevant digital and accounting records during a compliance check.'],['Are tips always subject to National Insurance?','Treatment depends on how tips are paid, controlled and distributed; the precise arrangement must be reviewed.']],
+    supportingQuestions:[
+      {title:'HMRC asking for EPOS and till records',href:'/hmrc-questions/hmrc-asking-for-epos-till-records'}
+    ],
     pathway:{
       problem:{title:'HMRC questions about cash payments',href:'/hmrc-problems/hmrc-questions-about-cash-payments'},
       question:{title:'What triggers an HMRC compliance check?',href:'/hmrc-questions/what-triggers-hmrc-compliance-check'},
@@ -129,6 +133,10 @@ export const industries:IndustryPage[]=[
     actions:['Export every platform report','Separate trading from personal disposals','Reconcile gross sales to refunds, fees and payouts','Calculate stock and allowable costs by year','Check Income Tax, CGT and VAT positions','Choose the correct amendment or disclosure route'],
     example:{title:'Example: mixed personal and resale activity',paragraphs:['A seller uses one marketplace account for clearing old household items and buying branded goods for resale. HMRC’s platform total includes both activities.','The seller classifies transactions using listings, purchase evidence and frequency, calculates trading profit only for the resale activity, considers any separate disposal rules and explains the reconciliation rather than claiming the whole account is private.']},
     faqs:[['Does receiving a platform report mean tax is due?','Not automatically. The activity, ownership, costs, allowances and applicable tax regime determine the result.'],['Is the bank payout my taxable turnover?','Usually it is necessary to start from gross transactions and reconcile platform fees, refunds and other adjustments.'],['Should I wait for HMRC to contact me?','No. If taxable income was omitted, establish the complete position and use the appropriate correction or disclosure route.']],
+    supportingQuestions:[
+      {title:'HMRC letter about online marketplace income',href:'/hmrc-questions/hmrc-letter-online-marketplace-income'},
+      {title:'Online selling: trading or personal possessions?',href:'/hmrc-questions/online-selling-trading-or-personal-possessions'}
+    ],
     pathway:{
       problem:{title:'Side-hustle income not declared',href:'/hmrc-problems/side-hustle-income-not-declared'},
       question:{title:'How does HMRC find undeclared income?',href:'/hmrc-questions/how-hmrc-finds-undeclared-income'},
@@ -158,6 +166,9 @@ export const industries:IndustryPage[]=[
     actions:['Export reports from every platform and operator','Reconstruct cash, card, tips and incentives','Reconcile gross activity to net payouts and bank receipts','Review mileage and vehicle costs under one valid method','Check status and VAT using the actual arrangements','Prepare a year-by-year response or disclosure schedule'],
     example:{title:'Example: app payouts do not match declared turnover',paragraphs:['A private-hire driver used two apps and declared the amounts deposited after commission. HMRC’s data shows higher gross bookings and separate incentive payments.','The driver reconciles gross fares, cancellations, tips, incentives, platform commissions and payouts for each app. Vehicle expenses are then tested separately, with private mileage excluded, instead of treating the difference between gross bookings and bank deposits as either all profit or all commission.']},
     faqs:[['Is the amount paid into my bank my taxable turnover?','Not necessarily. Start with gross business receipts and separately analyse fees, refunds and allowable costs.'],['Can I claim every mile driven while logged into an app?','No automatic rule makes every logged-in mile allowable. Journey purpose, activity and the applicable expense method must be established.'],['Does working through an app always mean self-employment?','No. Status depends on the contractual terms and working reality.'],['Do platform reports replace my own records?','No. Drivers should retain records sufficient to support complete and accurate tax returns.']],
+    supportingQuestions:[
+      {title:'HMRC checking Uber, Bolt or delivery-app income',href:'/hmrc-questions/hmrc-checking-uber-bolt-delivery-app-income'}
+    ],
     pathway:{
       problem:{title:'HMRC mileage evidence request',href:'/hmrc-problems/hmrc-mileage-evidence-request'},
       question:{title:'What documents can HMRC request?',href:'/hmrc-questions/documents-hmrc-request-self-assessment-enquiry'},
@@ -187,6 +198,10 @@ export const industries:IndustryPage[]=[
     actions:['Map every payer and professional role','Reconcile employment, partnership, company and self-employed income','Review locum status using contracts and actual practice','Test subscriptions, training, travel and equipment claims','Review VAT treatment service by service','Reconcile pension and entity records to filed returns'],
     example:{title:'Example: mixed locum and private-practice income',paragraphs:['A clinician works through an agency, invoices a private clinic through a company and receives separate report-writing fees. The original tax file groups all receipts as clinical income and assumes the same VAT and status treatment.','The response separates each engagement, reconciles gross receipts and applies status and VAT analysis to the actual contractual purpose and working arrangements. It also traces company payments to salary, expenses, dividends or director-loan entries rather than treating every withdrawal identically.']},
     faqs:[['Are all services provided by a doctor or dentist exempt from VAT?','No. Exemption depends on the nature and principal purpose of the supply and the conditions in the applicable rules.'],['Is every locum self-employed?','No. Status depends on the individual engagement and working reality.'],['Are professional subscriptions automatically deductible?','No. The payer, employment or business context and the relevant approved body or expense rules must be checked.'],['Can HMRC review pension information during an enquiry?','Yes, where pension relief or a tax charge is relevant to the return being checked.']],
+    supportingQuestions:[
+      {title:'HMRC locum employment status checks',href:'/hmrc-questions/hmrc-locum-employment-status-check'},
+      {title:'VAT on medical services: what HMRC may check',href:'/hmrc-questions/vat-on-medical-services-hmrc-check'}
+    ],
     pathway:{
       problem:{title:'HMRC asking for proof of income',href:'/hmrc-problems/hmrc-asking-for-proof-of-income'},
       question:{title:'What triggers an HMRC compliance check?',href:'/hmrc-questions/what-triggers-hmrc-compliance-check'},
