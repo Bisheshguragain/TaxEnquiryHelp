@@ -14,6 +14,7 @@ Last updated: 2026-07-31
 - [HMRC problem pages](https://www.taxenquiryhelp.co.uk/hmrc-problems): Focused action pages for HMRC letters, evidence requests, penalty notices and tax return errors.
 - [Industry-specific HMRC guidance](https://www.taxenquiryhelp.co.uk/industries): Focused enquiry guidance for landlords, construction and CIS businesses, hospitality businesses, online sellers, drivers and healthcare professionals.
 - [Contact TaxEnquiryHelp](https://www.taxenquiryhelp.co.uk/contact): Contact details and confidential enquiry form.
+- [UK VAT calculator](https://www.taxenquiryhelp.co.uk/calculators/vat-calculator): Add or remove VAT at 20%, 5%, 0% or a custom rate and calculate net, VAT and gross amounts.
 
 ## Core guides
 

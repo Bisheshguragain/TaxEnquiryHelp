@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {url:`${base}/hmrc-questions`,lastModified:updated,changeFrequency:'weekly',priority:.9},
     {url:`${base}/hmrc-problems`,lastModified:updated,changeFrequency:'weekly',priority:.9},
     {url:`${base}/industries`,lastModified:updated,changeFrequency:'monthly',priority:.8},
+    {url:`${base}/calculators/vat-calculator`,lastModified:new Date('2026-07-31'),changeFrequency:'monthly',priority:.8},
     {url:`${base}/contact`,lastModified:updated,changeFrequency:'monthly',priority:.7},
     ...['privacy','cookies','terms'].map(slug=>({url:`${base}/${slug}`,lastModified:updated,changeFrequency:'yearly' as const,priority:.2})),
     ...guides.map(guide=>({url:`${base}/knowledge-base/${guide.slug}`,lastModified:new Date(guide.reviewed==='23 July 2026'?'2026-07-23':'2026-07-17'),changeFrequency:'monthly' as const,priority:.8})),
